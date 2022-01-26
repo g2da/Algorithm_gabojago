@@ -1,0 +1,12 @@
+def solution(n, lost, reserve):
+    reserve_person = set(reserve) -set(lost)
+    lost_person = set(lost)-set(reserve)
+    
+    for i in reserve_person:
+        left = i-1
+        right = i+1
+        if left in lost_person:
+            lost_person.remove(left)
+        elif right in lost_person:
+            lost_person.remove(right)
+    return n-len(lost_person)
