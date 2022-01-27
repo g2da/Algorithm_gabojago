@@ -1,0 +1,13 @@
+N = int(input())
+rope_arr = []
+
+def solution():
+    rope_arr.sort(reverse=True)
+    for i in range(N):
+        rope_arr[i] = rope_arr[i] * (i+1)
+    return max(rope_arr)
+    
+for _ in range(N):
+    rope_arr.append(int(input()))
+    
+print(solution())
