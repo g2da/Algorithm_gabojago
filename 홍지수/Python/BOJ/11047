@@ -1,0 +1,12 @@
+N,K = map(int,input().split())
+coin_arr = []
+cnt = 0
+
+for i in range(N):
+    coin_arr.append(int(input()))
+
+for i in reversed(range(N)):
+    cnt += K // coin_arr[i]
+    K %= coin_arr[i]
+
+print(cnt)
