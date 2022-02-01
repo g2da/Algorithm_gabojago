@@ -1,8 +1,9 @@
 cnt = 0
-while (True):
-    L, P, V = map(int, input().split())
-    if L == 0 & P == 0 & V == 0:
-        break
-    result = ((V // P) * L) + min((V % P), L)
-    print("case %d : %d " % (cnt, result))
+while True:
     cnt += 1
+    L, P, V = map(int, input().split())
+    if L + P + V == 0:
+        break
+    else:
+        result = (V // P) * L + min((V % P), L)
+        print("Case %d: %d" % (cnt, result))
