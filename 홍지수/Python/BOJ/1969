@@ -1,0 +1,30 @@
+N, M = map(int, input().split())
+arr = []
+cnt = 0
+answer = ''
+answer2 = 0
+for i in range(N):
+    arr.append(input())
+for i in range(M):
+    result = [0, 0, 0, 0]
+    for j in range(N):
+        if arr[j][i] == 'A':
+            result[0] += 1
+        elif arr[j][i] == 'C':
+            result[1] += 1
+        elif arr[j][i] == 'G':
+            result[2] += 1
+        elif arr[j][i] == 'T':
+            result[3] += 1
+    cnt = result.index(max(result))
+    if cnt == 0:
+        answer += 'A'
+    elif cnt == 1:
+        answer += 'C'
+    elif cnt == 2:
+        answer += 'G'
+    elif cnt == 3:
+        answer += 'T'
+    answer2 += N - max(result)
+print(answer)
+print(answer2)
