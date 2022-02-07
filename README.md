@@ -12,8 +12,8 @@
 | :-: | :-: | :-: |
 | GitHub | [g2da](https://github.com/g2da) | [hye0e](https://github.com/hye0e) |
 언어 | <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=Java&logoColor=white"/> <img src="https://img.shields.io/badge/Python-3766AB?style=for-the-badge&logo=Python&logoColor=white"/> | <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=Java&logoColor=white"/> <img src="https://img.shields.io/badge/Python-3766AB?style=for-the-badge&logo=Python&logoColor=white"/>|
-|1월 다섯째 주 (22.01.30)|  |  |  
-|2월 첫째 주 (22.02.06)|  |  |
+|1월 다섯째 주 (22.01.30)| 🙆‍ |🏬 (현장실습)|  
+|2월 첫째 주 (22.02.06)| 🙆‍ |🌁 (현장실습)|
 |2월 둘째 주 (22.02.13)|  |  |
 |2월 셋째 주 (22.02.20)|  |  |
 |2월 넷째 주 (22.02.27)|  |  |
