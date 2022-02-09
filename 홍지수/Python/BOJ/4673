@@ -1,0 +1,8 @@
+numbers_list = set(range(1, 10001))
+for i in range(1, 10001):
+    for j in str(i):
+        i += int(j)
+    if i in numbers_list:
+        numbers_list.remove(i)
+for i in numbers_list:
+    print(i)
