@@ -1,0 +1,17 @@
+import sys
+
+T = int(sys.stdin.readline())
+for i in range(T):
+    arr = list(sys.stdin.readline().strip())
+    PS_arr = 0
+    for i in arr:
+        if i == '(':
+            PS_arr += 1
+        elif i == ')' and PS_arr != 0:
+            PS_arr -= 1
+        else:
+            PS_arr += 100
+    if PS_arr == 0:
+        print('YES')
+    else:
+        print('NO')
