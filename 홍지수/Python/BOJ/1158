@@ -1,0 +1,16 @@
+import sys
+
+N, K = map(int, sys.stdin.readline().split())
+arr = list(range(1, N + 1))
+answer = []
+num = K - 1
+
+for i in range(N):
+    if len(arr) > num:
+        answer.append(arr.pop(num))
+        num += K - 1
+    elif len(arr) <= num:
+        num %= len(arr)
+        answer.append(arr.pop(num))
+        num += K - 1
+print('<' + ', '.join(map(str, answer)) + '>')
