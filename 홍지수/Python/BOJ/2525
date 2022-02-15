@@ -1,0 +1,19 @@
+import sys
+
+A, B = map(int, sys.stdin.readline().split())
+C = int(sys.stdin.readline())
+
+if C >= 60:
+    A += C // 60
+    B += C % 60
+else:
+    B += C
+
+while B >= 60:
+    A += B // 60
+    B %= 60
+
+if A > 23:
+    A -= 24
+
+print(A, B)
