@@ -1,0 +1,11 @@
+import sys
+
+Croatia_alphabet = ['c=', 'c-', 'dz=', 'd-', 'lj', 'nj', 's=', 'z=']
+word = sys.stdin.readline().strip()
+
+for i in range(len(Croatia_alphabet)):
+    x = Croatia_alphabet[i]
+    if x in word:
+        word = word.replace(Croatia_alphabet[i], '*')
+
+print(len(word))
