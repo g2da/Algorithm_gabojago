@@ -1,0 +1,43 @@
+import sys
+from collections import deque
+
+N, M, V = map(int, sys.stdin.readline().split())
+
+
+def dfs(v):
+    # 현재 노드 방문 처리
+    visited[v] = True
+    print(v, end=' ')
+    for i in graph[v]:  # 최상단 노드(v)의 인접노드(i) 중 방문하지 않은 노드가 있다면
+        if not visited[i]:
+            dfs(i)  # 그 노드를 재귀적으로 방문하여 가장 깊숙한 곳까지 방문하였다가 다시 돌아와 다른 방향으로 깊숙이 방문하게 됨
+
+
+def bfs(start):
+    visited = [False] * (N + 1)
+    queue = deque([start])
+    visited[start] = True
+
+    while queue:
+        v = queue.popleft()
+        print(v, end=' ')
+        for i in graph[v]:
+            if not visited[i]:
+                queue.append(i)
+                visited[i] = True
+
+
+graph = [[] for _ in range(N + 1)]
+visited = [False] * (N + 1)  # 방문여부
+
+for _ in range(M):
+    A, B = map(int, sys.stdin.readline().split())
+    graph[A].append(B)
+    graph[B].append(A)
+
+for i in graph:  # 노드 번호에 따라 정렬
+    i.sort()
+
+dfs(V)
+print()
+bfs(V)
