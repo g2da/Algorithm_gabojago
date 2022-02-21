@@ -1,0 +1,12 @@
+import sys
+
+X = int(sys.stdin.readline())
+arr = []
+for i in range(1, X + 1):
+    if i < 100:
+        arr.append(i)
+    elif 100 <= i < 1000:
+        temp = list(map(int, str(i)))
+        if temp[2] - temp[1] == temp[1] - temp[0]:
+            arr.append(i)
+print(len(arr))
