@@ -1,0 +1,25 @@
+import sys
+from collections import Counter
+
+N = int(sys.stdin.readline())
+arr = []
+cnt = []
+mode_list = []
+for i in range(N):
+    arr.append(int(sys.stdin.readline()))
+
+arr_min = round(sum(arr) / N)
+arr_center = sorted(arr)[N // 2]
+
+arr.sort()
+arr_mode = Counter(arr).most_common()
+
+if len(arr_mode) > 1:
+    if arr_mode[0][1] == arr_mode[1][1]:
+        arr_mode = arr_mode[1][0]
+    else:
+        arr_mode = arr_mode[0][0]
+else:
+    arr_mode = arr_mode[0][0]
+arr_range = max(arr) - min(arr)
+print(arr_min, arr_center, arr_mode, arr_range)
