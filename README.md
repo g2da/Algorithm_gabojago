@@ -14,12 +14,14 @@
 언어 | <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=Java&logoColor=white"/> <img src="https://img.shields.io/badge/Python-3766AB?style=for-the-badge&logo=Python&logoColor=white"/> | <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=Java&logoColor=white"/> <img src="https://img.shields.io/badge/Python-3766AB?style=for-the-badge&logo=Python&logoColor=white"/>|
 |1월 다섯째 주 (22.01.30)| 🙆‍ |🏬 (현장실습)|  
 |2월 첫째 주 (22.02.06)| 🙆‍ |🌁 (현장실습)|
-|2월 둘째 주 (22.02.13)|  |  |
-|2월 셋째 주 (22.02.20)|  |  |
+|2월 둘째 주 (22.02.13)| 🙆‍ | 🏃‍♀️ |
+|2월 셋째 주 (22.02.20)| 🙆‍ | 🏃‍♀️ |
 |2월 넷째 주 (22.02.27)|  |  |
 |3월 첫째 주 (22.03.26)|  |  |
 
 🙆‍♀️ : 한 주 동안 다 했어요  
-🗑️ : 하루라도 쉬었어요  
+🏃‍♀️ : 바쁜 한 주 였어요
+🗑️ : 저는 쓰레기예요
+
 <br />
 <img src="https://user-images.githubusercontent.com/80965583/150288493-fb0ff51b-4a77-47db-b70c-1e75a398c918.png" width="400" height="400">
