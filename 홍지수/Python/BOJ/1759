@@ -2,28 +2,34 @@ import sys
 import itertools
 
 L, C = map(int, sys.stdin.readline().split())
-vowel = ['a', 'e', 'i', 'o', 'u']
-vowel.sort()
-arr = list(map(str, sys.stdin.readline().split()))
-# ['a', 't', 'c', 'i', 's', 'w']
 password = []
+tmp = []
 answer = []
+vowel = ['a', 'e', 'i', 'o', 'u']
+
+arr = list(map(str, sys.stdin.readline().split()))
+arr.sort()
 combination = list(itertools.combinations(arr, L))
-combination.sort()
+
 for i in range(len(combination)):
     for j in range(L):
         if combination[i][j] in vowel:
-            answer.append(combination[i])
-            answer.sort()
-result = set(answer)
-result = list(result)
-result.sort()
-real_answer = []
-for i in result:
-    # i.sort()
-    real_answer.append(''.join(i))
+            tmp.append(combination[i])
 
-real_answer.sort()
-for i in real_answer:
+clear = set(tmp)
+clear = list(clear)
+
+for i in clear:
+    cnt = 0
+    for j in range(L):
+        if i[j] not in vowel:
+            cnt += 1
+    if cnt >= 2:
+        answer.append(i)
+
+for i in answer:
+    password.append(''.join(i))
+
+password.sort()
+for i in password:
     print(i)
-# print(real_answer)
