@@ -1,0 +1,11 @@
+import sys
+from itertools import combinations
+
+while True:
+    arr = list(sys.stdin.readline().split())
+    if arr[0] == '0':
+        break
+    lotto = list(combinations(arr[1:], 6))
+    for j in lotto:
+        print(' '.join(list(j)))
+    print()
