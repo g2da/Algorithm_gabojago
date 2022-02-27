@@ -1,0 +1,33 @@
+import sys
+
+N = int(sys.stdin.readline())
+arr = []
+switch = list(map(int, sys.stdin.readline().split()))
+students = int(sys.stdin.readline())
+
+for i in range(students):
+    sex, number = map(int, sys.stdin.readline().split())
+    if sex == 1:
+        for j in range(len(switch)):
+            if (j + 1) % number == 0:
+                switch[j] = (switch[j] + 1) % 2
+    elif sex == 2:
+        if number == 1:
+            switch[0] = (switch[0] + 1) % 2
+        else:
+            end = True
+            left, right = number - 2, number
+            while end:
+                if left >= 0 and right < N and switch[left] == switch[right]:
+                    switch[left] = (switch[left] + 1) % 2
+                    switch[right] = (switch[right] + 1) % 2
+                    left -= 1
+                    right += 1
+                else:
+                    switch[number - 1] = (switch[number - 1] + 1) % 2
+                    end = False
+
+for i in range(len(switch)):
+    print(switch[i], end=' ')
+    if (i + 1) % 20 == 0:
+        print()
