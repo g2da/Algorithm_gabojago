@@ -1,0 +1,19 @@
+import sys
+from itertools import permutations
+
+N, M = map(int, sys.stdin.readline().split())
+arr = list(range(1, N + 1))
+per = list(permutations(arr, M))
+for i in list(per):
+    print(*i)
+# 초기 제출 코드
+# import sys
+# from itertools import permutations
+#
+# N, M = map(int, sys.stdin.readline().split())
+# arr = list(range(1, N + 1))
+# per = list(permutations(arr, M))
+# for i in list(per):
+#     for j in range(len(i)):
+#         print(i[j], end=' ')
+#     print()
