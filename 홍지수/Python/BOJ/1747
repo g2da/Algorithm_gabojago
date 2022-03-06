@@ -1,0 +1,27 @@
+import sys
+
+number_reverse = ''
+def get_prime(n):
+    is_prime = [True] * n
+    m = int((2 * n) ** 0.5)
+    for i in range(2, m + 1):
+        if is_prime[i] == True:
+            for j in range(2 * i, n, i):
+                is_prime[j] = False
+            return True
+
+while True:
+    N = int(sys.stdin.readline())
+    if get_prime(N):
+        number = list(map(str,str(N)))
+        # print(number)
+        for i in number:
+            number_reverse = i + number_reverse
+        # print(type(number_reverse))
+        if int(number_reverse) == N:
+            print(N)
+            break
+        else:
+            N += 1
+    else:
+        N += 1
