@@ -1,0 +1,9 @@
+import sys
+
+N = int(sys.stdin.readline())
+arr = []
+
+arr = list(map(int, str(N)))
+arr.sort(reverse=True)
+for i in arr:
+    print(i, end='')
