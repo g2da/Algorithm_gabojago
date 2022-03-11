@@ -1,0 +1,13 @@
+import sys
+
+N, M = map(int, sys.stdin.readline().split())
+no_listen = set()
+no_see = set()
+for i in range(N):
+    no_listen.add(sys.stdin.readline().strip())
+for i in range(M):
+    no_see.add(sys.stdin.readline().strip())
+answer = no_listen & no_see
+print(len(answer))
+for i in sorted(answer):
+    print(i)
