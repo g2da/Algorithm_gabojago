@@ -1,0 +1,25 @@
+import sys
+
+cnt = 1
+while True:
+    ans = 0
+    stack = []
+    line = sys.stdin.readline().strip()
+    if '-' in line:
+        break
+    for i in line:
+        if i == '{':
+            stack.append(i)
+        else:
+            if stack:
+                stack.pop()
+            else:
+                ans += 1
+                stack.append(i)
+    while stack:
+        if len(stack) % 2 == 0:
+            ans += 1
+        stack.pop()
+    print('{}. {}'.format(cnt, ans))
+
+    cnt += 1
