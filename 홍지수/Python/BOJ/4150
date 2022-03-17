@@ -1,0 +1,12 @@
+import sys
+
+
+def Fib(n):
+    arr = [0, 1]
+    for i in range(2, n + 1):
+        arr.append(arr[i - 1] + arr[i - 2])
+    return arr[n]
+
+
+N = int(sys.stdin.readline())
+print(Fib(N))
