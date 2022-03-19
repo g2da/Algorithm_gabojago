@@ -1,0 +1,12 @@
+import sys
+
+T = int(sys.stdin.readline())
+
+zero_arr = [1, 0]
+one_arr = [0, 1]
+for j in range(2, 41):
+    zero_arr.append(zero_arr[j - 1] + zero_arr[j - 2])
+    one_arr.append(one_arr[j - 1] + one_arr[j - 2])
+for _ in range(T):
+    N = int(sys.stdin.readline())
+    print(zero_arr[N], one_arr[N])
