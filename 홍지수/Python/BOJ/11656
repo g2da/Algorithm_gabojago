@@ -1,0 +1,9 @@
+import sys
+
+S = sys.stdin.readline().strip()
+arr = []
+for i in range(0, len(S)):
+    arr.append(S[i:])
+arr.sort()
+
+print(*arr, sep='\n')
