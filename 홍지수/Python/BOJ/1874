@@ -1,0 +1,23 @@
+import sys
+
+n = int(sys.stdin.readline())
+num = 1
+stack = []
+ans = []
+possibility = True
+for i in range(n):
+    N = int(sys.stdin.readline())
+    while num <= N:
+        stack.append(num)
+        ans.append('+')
+        num += 1
+    if stack[-1] == N:
+        stack.pop()
+        ans.append('-')
+    else:
+        possibility = False
+        break
+if possibility:
+    print(*ans, sep='\n')
+else:
+    print('NO')
