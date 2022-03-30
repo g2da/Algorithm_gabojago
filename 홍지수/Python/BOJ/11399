@@ -1,0 +1,10 @@
+import sys
+
+N = int(sys.stdin.readline())
+arr = sorted(list(map(int, sys.stdin.readline().split())))
+ans = []
+arr_sum = 0
+for i in arr:
+    arr_sum += i
+    ans.append(arr_sum)
+print(sum(ans))
