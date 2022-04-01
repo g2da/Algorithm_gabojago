@@ -5,7 +5,7 @@ input = sys.stdin.readline
 N, M = map(int, input().split())
 tree = list(map(int, input().split()))
 
-left = min(tree)
+left = 0
 right = max(tree)
 result = 0
 
