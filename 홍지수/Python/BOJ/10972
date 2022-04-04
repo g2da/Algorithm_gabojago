@@ -1,0 +1,14 @@
+import sys
+from itertools import permutations
+
+N = int(sys.stdin.readline())
+input = list(map(int, sys.stdin.readline().rsplit()))
+for i in range(N - 1, 0, -1):
+    if input[i - 1] < input[i]:
+        for j in range(N - 1, 0, -1):
+            if input[i - 1] < input[j]:
+                input[i - 1], input[j] = input[j], input[i - 1]
+                ans = input[:i] + sorted(input[i:])
+                print(*ans)
+                exit()
+print(-1)
