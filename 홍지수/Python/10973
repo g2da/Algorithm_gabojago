@@ -1,0 +1,13 @@
+import sys
+
+N = int(sys.stdin.readline())
+input = list(map(int, sys.stdin.readline().split()))
+for i in range(N - 1, 0, -1):
+    if input[i] < input[i - 1]:
+        for j in range(N - 1, 0, -1):
+            if input[j] < input[i - 1]:
+                input[j], input[i - 1] = input[i - 1], input[j]
+                input = input[:i] + sorted(input[i:], reverse=True)
+                print(*input)
+                exit()
+print(-1)
