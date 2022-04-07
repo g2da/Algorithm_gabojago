@@ -1,0 +1,15 @@
+import sys
+from collections import Counter
+
+N = int(sys.stdin.readline())
+for i in range(N):
+    clothe = []
+    M = int(sys.stdin.readline())
+    for j in range(M):
+        name, case = sys.stdin.readline().split()
+        clothe.append(case)
+    cnt = 1
+    look = Counter(clothe)
+    for k in look:
+        cnt *= look[k] + 1
+    print(cnt - 1)
