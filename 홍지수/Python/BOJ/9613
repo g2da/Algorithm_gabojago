@@ -1,0 +1,19 @@
+import sys
+from itertools import combinations
+
+
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+
+t = int(sys.stdin.readline())
+for _ in range(t):
+    arr = list(map(int, sys.stdin.readline().split()))
+    arr.pop(0)
+    comb = list(combinations(arr, 2))
+    sum = 0
+    for i in comb:
+        sum += gcd(i[0], i[1])
+    print(sum)
