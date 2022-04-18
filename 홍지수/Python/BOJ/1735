@@ -1,0 +1,15 @@
+import sys
+
+
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+
+a, b = map(int, sys.stdin.readline().split())
+c, d = map(int, sys.stdin.readline().split())
+mom = b * d
+son = c * b + d * a
+gcd_ans = gcd(mom, son)
+print(son // gcd_ans, mom // gcd_ans)
