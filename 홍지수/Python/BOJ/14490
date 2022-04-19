@@ -1,0 +1,12 @@
+import sys
+
+
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+
+n, m = map(int, sys.stdin.readline().split(':'))
+key = gcd(n, m)
+print('{}:{}'.format(n // key, m // key))
