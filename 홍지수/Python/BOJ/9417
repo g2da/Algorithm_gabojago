@@ -1,0 +1,20 @@
+import sys
+from itertools import combinations
+
+
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+
+N = int(sys.stdin.readline())
+for _ in range(N):
+    max = 0
+    arr = list(map(int, sys.stdin.readline().split()))
+    com_arr = list(combinations(arr, 2))
+    for i in com_arr:
+        for j in range(len(com_arr)):
+            if gcd(i[0], i[1]) > max:
+                max = gcd(i[0], i[1])
+    print(max)
