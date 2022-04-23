@@ -1,0 +1,28 @@
+import sys
+
+
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+
+def getdivisor(n):
+    arr = []
+    for i in range(1, int(n ** (1 / 2)) + 1):
+        if n % i == 0 and i != (n // i):
+            arr.append((i, n // i))
+    return arr
+
+
+T = int(sys.stdin.readline())
+for _ in range(T):
+    n = int(sys.stdin.readline())
+    cnt = 0
+    if n == 1:
+        cnt += 1
+    arr = getdivisor(n)
+    for i in arr:
+        if gcd(i[0], i[1]) == 1:
+            cnt += 1
+    print(cnt)
