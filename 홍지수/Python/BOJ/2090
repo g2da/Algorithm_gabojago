@@ -1,0 +1,23 @@
+import sys
+from itertools import combinations
+
+
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+
+N = int(sys.stdin.readline())
+arr = list(map(int, sys.stdin.readline().split()))
+mom = 1
+son_sum = 0
+
+for i in arr:
+    mom *= i
+
+for j in arr:
+    son_sum += mom // j
+
+key = gcd(son_sum, mom)
+print('{}/{}'.format(mom // key, son_sum // key))
