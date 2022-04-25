@@ -1,0 +1,23 @@
+import sys
+
+
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+
+N, S = map(int, sys.stdin.readline().split())
+arr = list(map(int, sys.stdin.readline().split()))
+gap = []
+arr.append(S)
+new_arr = sorted(arr)
+for i in range(1, len(new_arr)):
+    gap.append(new_arr[i] - new_arr[i - 1])
+
+while True:
+    if len(gap) == 1:
+        break
+    gap.append(gcd(gap.pop(), gap.pop()))
+
+print(*gap)
