@@ -1,0 +1,14 @@
+import sys
+
+number = {1: 'one', 2: 'two', 3: 'three', 4: 'four', 5: 'five',
+          6: 'six', 7: 'seven', 8: 'eight', 9: 'nine', 0: 'zero'}
+M, N = map(int, sys.stdin.readline().split())
+arr = range(M, N + 1)
+numbers = {}
+for i in arr:
+    add = ' '.join(number[int(j)] for j in str(i))
+    numbers[i] = add
+ans = sorted(numbers, key=lambda x: numbers[x])
+while ans:
+    print(*ans[:10])
+    ans = ans[10:]
