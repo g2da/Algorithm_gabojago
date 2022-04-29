@@ -1,19 +1,16 @@
 import sys
 
 T = int(sys.stdin.readline())
-day = []
-money = []
-dp = []
-dp.append(0)
+arr = []
+dp = [0] * (T + 1)
 for _ in range(T):
-    a, b = map(int, sys.stdin.readline().split())
-    day.append(a)
-    money.append(b)
+    day, money = map(int, sys.stdin.readline().split())
+    arr.append([day, money])
 
 for i in range(T - 1, -1, -1):
-    if day[i] + i > T:
+    if arr[i][0] + i > T:
         dp[i] = dp[i + 1]
     else:
-        dp[i] = max(dp[i + 1], money[i] + dp[i + day[i]])
+        dp[i] = max(dp[i + 1], arr[i][1] + dp[i + arr[i][0]])
 
 print(dp[0])
