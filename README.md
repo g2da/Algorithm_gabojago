@@ -6,6 +6,8 @@
 ✌️ 먼저 포기하는 사람은 헤드뱅잉    
 🏋️‍♀️ 아좌좌🏋️
 
+<img src="https://user-images.githubusercontent.com/80965583/167544060-3dfe6cd5-808b-4d05-938f-4ca3b7f8afc7.jpg" width="400" height="550">
+
 <br />
 
 | 참가자 | 홍지수 | 신혜영|
@@ -32,3 +34,4 @@
 
 <br />
 <img src="https://user-images.githubusercontent.com/80965583/150288493-fb0ff51b-4a77-47db-b70c-1e75a398c918.png" width="400" height="400">
+
